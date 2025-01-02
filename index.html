@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Menu awal untuk memasukkan nama -->
+        <div id="name-section">
+            <h2>Masukkan Nama</h2>
+            <input type="text" id="userName" placeholder="Nama kamu">
+            <button onclick="enterChat()">Masuk Chat</button>
+        </div>
+
+        <!-- Menu untuk membuat grup atau mencari grup -->
+        <div id="chat-section" class="hidden">
+            <h2>Welcome, <span id="displayName"></span>!</h2>
+            <button onclick="createGroup()">Buat ID Grup</button>
+            <input type="text" id="searchGroup" placeholder="Cari ID Grup">
+            <button onclick="joinGroup()">Masuk Grup</button>
+            <br><br>
+            <div id="chat-box" class="hidden">
+                <h3>Grup Chat</h3>
+                <div id="messages"></div>
+                <input type="text" id="messageInput" placeholder="Tulis pesan...">
+                <button onclick="sendMessage()">Kirim</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
